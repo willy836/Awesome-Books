@@ -1,60 +1,95 @@
 
+let booksData = [];
+
 // Add new book to collection
 const bookContainer = document.querySelector('.book-container');
 const form = document.querySelector('.form');
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const btn = document.querySelector('.btn');
-const removeBtn = document.querySelector('.remove')
+
 const list = document.querySelector('.book-list')
-let object = {author:"authorValue", title:"titleValue"};
 
-let booksData = [
-    {
-        title: 'My First Book',
-        author: 'John Doe'
-    },
-    {
-        title: 'My Second Book',
-        author: 'Jane Doe'
-    },
-    {
-        title: 'My Third Book',
-        author: 'Mark Smith'
-    },
-    {
-        title: 'My Fourth Book',
-        author: 'Mary Smith'
+// Retrieve books from localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    
+    const userBooks = JSON.parse(localStorage.getItem('bookStore'));
+  
+    if (userBooks.length > 0) {
+        userBooks.forEach((bk)=> {
+            
+    createBook(bk.title, bk.author);
+    
+        })
+        
     }
-];
-console.log(booksData);
+    resetInputs(); 
+  });
 
+//   reset form inputs
+const resetInputs = ()=> {
+    title.value = '';
+    author.value = '';
+}
 
 // Add book
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
-    const titleValue = title.value;
-    console.log(titleValue);
-    const authorValue = author.value;
-    console.log(authorValue);
+
+    createBook(title.value, author.value);
+    resetInputs();
     
-    if(titleValue && authorValue) {
-        const book = document.createElement('article');
-        book.className = 'book';
-        book.innerHTML = `<p class="book-title">${titleValue}</p>
-        <p class="book-author">${authorValue}</p>
-        <button class="remove">Remove</button>`;
-        
-        booksData.push(object);
-         
-        list.appendChild(book);
-        bookContainer.classList.add('show-container'); 
-    }
+    localStorage.setItem('bookStore', JSON.stringify(booksData));
 });
 
-// console.log(booksData)
+function createBook(titleValue, authorValue) {
+    title.value = titleValue;
+    author.value = authorValue;
+    const id = new Date().getTime().toString();
 
-// Remove book
-// removeBtn.addEventListener('click', ()=> {
-//     list.
-// })
+    const book = document.createElement('article');
+
+        book.className = 'book';
+        const attr = document.createAttribute('data-id');
+        attr.value = id;
+        book.setAttributeNode(attr); 
+        book.innerHTML = `<p class="book-title">${titleValue}</p>
+        <p class="book-author">${authorValue}</p>
+        <button class="remove">Remove</button>
+        <hr>`;
+
+        let object = {};
+        object.title = titleValue;
+        object.author = authorValue;
+        object.id = id;
+        booksData.push(object);
+        object = {};
+
+        list.appendChild(book);
+        bookContainer.classList.add('show-container');
+
+        const removeBtns = document.querySelectorAll('.remove');
+        removeBtns.forEach((removeBtn)=> {
+            removeBtn.addEventListener('click', (e)=> {
+                const element = e.target.parentElement;
+                const id = element.dataset.id;
+                
+                list.removeChild(element);
+                //remove from local storage
+                let allBooks = JSON.parse(localStorage.getItem('bookStore'));
+                
+                allBooks = allBooks.filter((book)=> {
+                    if(book.id !== id){
+                        console.log(book)
+                        return book;
+                    }
+                    
+                });
+              //console.log(allBooks)
+              localStorage.setItem('bookStore', JSON.stringify(booksData));
+              
+            })
+        })
+        
+        
+}
