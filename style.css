@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  padding: 0 5%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.form {
+  padding: 0 5%;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.form label {
+  display: none;
+}
+
+.form div {
+  margin-bottom: 2%;
+}
+
+.book-container {
+  visibility: hidden;
+  padding: 0 5%;
+  width: 40%;
+  margin: 2% auto;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+hr {
+  padding: 0 5%;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: #333;
+}
+
+.remove {
+  display: block;
+}
