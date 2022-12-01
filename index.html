@@ -8,28 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="heading">Awesome Books</h1>
-    <section class="book-container">
-        <div class="book-list">
-            <!-- <p class="book-title"></p>
-            <p class="book-author"></p>
-            <button class="remove">Remove</button>
-            <hr> -->
+    <section class="container">
+        <div class="display-books">
+            <h1 class="h1">All Awesome Books</h1>
+            <div>
+                <div class="book-list">
+                    
+                </div>
+            </div>
         </div>
+        <h2 class="h2">Add a new book</h2>
+        <form class="form">
+            <div>
+                <label for="title"></label>
+                <input type="text" name="title" class="title" placeholder="Title">
+            </div>
+            <div>
+                <label for="author"></label>
+                <input type="text" name="author" class="author" placeholder="Author">
+            </div>
+            <div class="btn">
+                <button type="button" class="add-btn">Add</button>
+            </div>
+        </form>
     </section>
-    <form action="" class="form">
-        <div>
-            <label for="title">Title</label>
-            <input type="text" name="title" placeholder="Title" class="title" >
-        </div>
-        <div>
-            <label for="author">Author</label>
-            <input type="text" name="author" placeholder="Author" class="author" >
-        </div>
-        <div>
-            <button type="submit" class="btn"> Add</button>
-        </div>
-    </form>
     <script src="main.js"></script>
+    
 </body>
 </html>
