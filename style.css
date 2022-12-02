@@ -6,20 +6,56 @@
   box-sizing: border-box;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  margin: 10px 15px;
+  border: 2px solid #000;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.nav .links {
+  display: flex;
+  list-style: none;
+}
+
+.nav .link {
+  padding: 0 10px;
+  border-right: 1px solid #000;
+  font-size: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.date {
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 15px;
+  
+}
+
 .container {
-  width: 30%;
-  margin: 10% auto;
-  padding: 10px;
+  margin: 15px;
+  
 }
 
 .h1 {
-  margin: 5px 0;
+  margin: 15px 0;
   text-align: center;
+  font-size: 30px;
 }
 
 .book-list {
-  width: 100%;
-  height: 0%;
+  
   border: 2px solid #000;
   margin-bottom: 35px;
   visibility: hidden;
@@ -31,7 +67,30 @@
 
 .article {
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
+  
+  align-items: center;
+  padding: 0 10px;
+  
+}
+
+.article .title::before,
+.article .title::after {
+  content: '"'
+}
+
+
+
+.article .author::before {
+  content: ' by ';
+}
+
+.article p {
+  line-height: 25px;
+  font-size: 18px;
+}
+.article .rmv-div {
+  margin-left: auto;
 }
 
 article:nth-child(odd) {
@@ -59,4 +118,14 @@ article:nth-child(odd) {
 
 .form .btn {
   text-align: end;
+}
+
+.footer {
+  padding: 5px 15px;
+  margin: 10px 15px;
+  border: 2px solid #000;
+}
+
+.footer .copyright {
+  font-size: 20px;
 }
