@@ -133,3 +133,52 @@ removeBtn.addEventListener('click', (event) => {
     displayBooks();
   }
 });
+
+// Date
+const dateContainer = document.querySelector('.date');
+const date = new Date();
+const options = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+};
+const dateStr = date.toLocaleString('en-US', options);
+dateContainer.innerHTML = dateStr;
+
+// Change main area content on click
+const listLink = document.querySelector('.list');
+const addNewLink = document.querySelector('.add-new');
+const contactLink = document.querySelector('.cntct');
+const showBooks = document.querySelector('.display-books');
+const h2 = document.querySelector('.h2');
+const form = document.querySelector('.form');
+const contactDiv = document.querySelector('.contact');
+
+listLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showBooks.classList.add('show');
+  h2.classList.remove('show');
+  form.classList.remove('show');
+  contactDiv.classList.remove('show');
+});
+
+addNewLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showBooks.classList.remove('show');
+  showBooks.classList.add('hide');
+  h2.classList.add('show');
+  form.classList.add('show');
+  contactDiv.classList.remove('show');
+});
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showBooks.classList.add('hide');
+  showBooks.classList.remove('show');
+  h2.classList.remove('show');
+  form.classList.remove('show');
+  contactDiv.classList.add('show');
+});

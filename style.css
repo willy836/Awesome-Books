@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -40,12 +44,14 @@
   display: flex;
   justify-content: flex-end;
   margin: 10px 15px;
-  
 }
 
 .container {
   margin: 15px;
-  
+}
+
+.display-books {
+  height: 474px;
 }
 
 .h1 {
@@ -55,7 +61,6 @@
 }
 
 .book-list {
-  
   border: 2px solid #000;
   margin-bottom: 35px;
   visibility: hidden;
@@ -68,18 +73,14 @@
 .article {
   display: flex;
   gap: 5px;
-  
   align-items: center;
   padding: 0 10px;
-  
 }
 
 .article .title::before,
 .article .title::after {
-  content: '"'
+  content: '"';
 }
-
-
 
 .article .author::before {
   content: ' by ';
@@ -89,6 +90,7 @@
   line-height: 25px;
   font-size: 18px;
 }
+
 .article .rmv-div {
   margin-left: auto;
 }
@@ -103,8 +105,8 @@ article:nth-child(odd) {
 }
 
 .h2 {
-  font-size: 16px;
-  margin: 3px 0;
+  font-size: 30px;
+  margin-top: 8%;
   text-align: center;
 }
 
@@ -112,12 +114,57 @@ article:nth-child(odd) {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  gap: 3px;
-  width: fit-content;
+  margin-bottom: 195px;
+  margin-top: 50px;
+  width: 40%;
+}
+
+form input {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 20px;
 }
 
 .form .btn {
   text-align: end;
+}
+
+form .add-btn {
+  padding: 5px 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.info {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: 50px;
+}
+
+.info-desc {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.para {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  margin-bottom: 199px;
+}
+
+.contact-ul {
+  padding: 0 40px;
+  font-size: 18px;
 }
 
 .footer {

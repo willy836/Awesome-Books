@@ -14,62 +14,65 @@
                 Awesome Books
             </div>
             <ul class="links">
-                <li class="link"><a href="">List</a></li>
-                <li class="link"><a href="">Add new</a></li>
-                <li class="link"><a href="">Contact</a></li>
+                <li class="link list"><a href="">List</a></li>
+                <li class="link add-new"><a href="">Add new</a></li>
+                <li class="link cntct"><a href="">Contact</a></li>
             </ul>
         </nav>
-        <div class="date">March 17, 20221, 9:23:10 am</div>
+        <div class="date"></div>
     </section>
-    <section class="container">
-        <div class="display-books">
-            <h1 class="h1">All awesome books</h1>
-            <div>
-                <div class="book-list">
-                    
+    <main>
+        <section class="container">
+            <div class="display-books ">
+                <h1 class="h1">All awesome books</h1>
+                <div>
+                    <div class="book-list">
+                        
+                    </div>
                 </div>
             </div>
-        </div>
-        <h2 class="h2">Add a new book</h2>
-        <form class="form">
-            <div>
-                <label for="title"></label>
-                <input type="text" name="title" class="title" placeholder="Title">
+            <h2 class="h2 hide">Add a new book</h2>
+            <form class="form hide">
+                <div>
+                    <label for="title"></label>
+                    <input type="text" name="title" class="title" placeholder="Title">
+                </div>
+                <div>
+                    <label for="author"></label>
+                    <input type="text" name="author" class="author" placeholder="Author">
+                </div>
+                <div class="btn">
+                    <button type="button" class="add-btn">Add</button>
+                </div>
+            </form>
+            <div class="contact hide">
+                <h2 class="info">Contact information</h2>
+                <div class="info-desc">
+                    <p class="para">
+                        Do you have any questions or you just want to say "Hello"?<br>
+                        You can reach out to us!
+                    </p>
+                    <ul class="contact-ul">
+                        <li class="contact-li">
+                            Our email: mail@mail.com
+                        </li>
+                        <li class="contact-li">
+                            Our phone number: 0043586534422
+                        </li>
+                        <li class="contact-li">
+                            Our address: Streetname 22, 84503 City, Country
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <label for="author"></label>
-                <input type="text" name="author" class="author" placeholder="Author">
+        </section>
+        <footer class="footer">
+            <div class="copyright">
+                Copyright ...
             </div>
-            <div class="btn">
-                <button type="button" class="add-btn">Add</button>
-            </div>
-        </form>
-        <div class="contact">
-            <h2 class="info">Contact information</h2>
-            <div class="info-desc">
-                <p class="para">
-                    Do you have any questions or you just want to say "Hello"?
-                    You can reach out to us!
-                </p>
-                <ul class="contact-ul">
-                    <li class="contact-li">
-                        Our email: mail@mail.com
-                    </li>
-                    <li class="contact-li">
-                        Our phone number: 0043586534422
-                    </li>
-                    <li class="contact-li">
-                        Our address: Streetname 22, 84503 City, Country
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="copyright">
-            Copyright ...
-        </div>
-    </footer>
+        </footer>
+    </main>
+    
     <script src="main.js"></script>
     
 </body>
