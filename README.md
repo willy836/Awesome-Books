@@ -47,7 +47,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<img src="./images/ab-pic.png" alt="demo" width="140"  height="auto" />
+<img src="./images/aw-preview.png" alt="demo" width="auto"  height="auto" />
 
 - [Live Demo Link](https://willy836.github.io/Awesome-Books/)
 
@@ -57,7 +57,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 
