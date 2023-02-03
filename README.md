@@ -37,14 +37,21 @@
 
 # 📖 [Awesome Books] <a name="about-project"></a>
 
-
-
 **[Awesome Books]** is a website that allows users to add/remove books from a list.
 
 ## 🛠 Built With <a name="built-with">HTML</a>
 
 ### Tech Stack <a name="tech-stack">JavaScript</a>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+<img src="./images/ab-pic.png" alt="demo" width="140"  height="auto" />
+
+- [Live Demo Link](https://willy836.github.io/Awesome-Books/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -67,6 +74,7 @@ Clone this repository to your desired folder:
 - cd Awesome-Books/
 - code .
 - open with live server
+
 ### Install
 
 Install this project with:
@@ -82,12 +90,12 @@ Thi project can be used by anyone who may want to practice JavaScript
 To run tests, run the following command:
 
 To check for HTML errors:
-- npx hint .
-To check for CSS/SASS errors:
-- npx stylelint "\*_/_.{css,scss}"
-To check for JavaScript errors:
-- npx eslint .
 
+- npx hint .
+  To check for CSS/SASS errors:
+- npx stylelint "\*_/_.{css,scss}"
+  To check for JavaScript errors:
+- npx eslint .
 
 ## 👥 Author <a name="authors"></a>
 
@@ -98,7 +106,6 @@ To check for JavaScript errors:
 - GitHub: [@willy836](https://github.com/willy836)
 - Twitter: [@Kimiri836](https://twitter.com/Kimiri836)
 - LinkedIn: [Wilson Kimiri](https://www.linkedin.com/in/wilson-kimiri-420396235/)
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -114,10 +121,8 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
